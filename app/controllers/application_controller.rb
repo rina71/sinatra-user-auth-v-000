@@ -23,6 +23,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/sessions/login' do
+    session[:id] = @user.id
     erb :'sessions/login'
   end
 
